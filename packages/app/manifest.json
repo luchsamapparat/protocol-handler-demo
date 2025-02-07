@@ -1,0 +1,22 @@
+{
+    "name": "App <!--#echo var="APP_IDENTIFIER"-->",
+    "short_name": "App <!--#echo var="APP_IDENTIFIER"-->",
+    "start_url": "/",
+    "display": "fullscreen",
+    "scope": "/",
+    "background_color": "#ffffff",
+    "theme_color": "#fcbe03",
+    "icons": [
+        {
+            "src": "/icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ],
+    "protocol_handlers": [
+        {
+            "protocol": "web+app<!--#echo var="APP_IDENTIFIER"-->",
+            "url": "/?handle=%s"
+        }
+    ]
+}

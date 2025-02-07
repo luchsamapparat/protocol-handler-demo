@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App <!--#echo var="APP_IDENTIFIER"--></title>
+
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        code {
+            font-family: monospace;
+            font-size: 15px;
+            color: #a52a2a;
+        }
+
+        a, a:visited, a:active {
+            color: #0000ee;
+        }
+
+        pre,
+        script {
+            display: block;
+            white-space: pre;
+            font-family: monospace;
+            border: 1px solid #cccccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+    <link rel="manifest" href="manifest.json" />
+</head>
+
+<body>
+    <h1>App <!--#echo var="app_identifier"--></h1>
+
+    <section>
+        <h2>Search Params</h2>
+
+        <pre id="searchParams"></pre>
+
+        <script style="display: block">
+            document.getElementById('searchParams').innerText = window.location.search;
+        </script>
+    </section>
+
+    </section>
+</body>
+
+</html>

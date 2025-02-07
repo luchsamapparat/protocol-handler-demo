@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        code {
+            font-family: monospace;
+            font-size: 15px;
+            color: #a52a2a;
+        }
+
+        a, a:visited, a:active {
+            color: #0000ee;
+        }
+
+        pre,
+        script {
+            display: block;
+            white-space: pre;
+            font-family: monospace;
+            border: 1px solid #cccccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Portal</h1>
+
+
+    <section>
+        <h2><code>web+app</code> Links</h2>
+
+        <p><a id="link-app1" href="web+appone://example">open <code>web+appone://example</code></a></p>
+        <p><a id="link-app2" href="web+appone://another-example">open <code>web+appone://another-example</code></a></p>
+
+        <p><a id="link-app3" href="web+apptwo://example">open <code>web+apptwo://example</code></a></p>
+        <p><a id="link-app4" href="web+apptwo://another-example">open <code>web+apptwo://another-example</code></a></p>
+
+        <pre id="links-src"></pre>
+
+        <script style="display: none;">
+            const links = [...document.querySelectorAll('a[id^="link-app-"]')];
+
+            document.getElementById('links-src').appendChild(
+                document.createTextNode(`${links.map(a => a.outerHTML).join('\n')}`));
+        </script>
+    </section>
+</body>
+
+</html>

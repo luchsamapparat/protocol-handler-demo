@@ -1,0 +1,25 @@
+services:
+  app-1:
+    build:
+      context: ./packages/app
+    environment:
+      APP_IDENTIFIER: "one"
+    ports:
+      - "8081:80"
+
+  app-2:
+    build:
+      context: ./packages/app
+    environment:
+      APP_IDENTIFIER: "two"
+    ports:
+      - "8082:80"
+
+  portal:
+    build:
+      context: ./packages/portal
+    environment:
+      APP1_URL: "http://localhost:8081"
+      APP2_URL: "http://localhost:8082"
+    ports:
+      - "8080:80"
